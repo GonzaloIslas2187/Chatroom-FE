@@ -1,0 +1,22 @@
+.message-card {
+    flex: 1 1 200px;
+    margin: 5px 0px;
+    max-width: 70%;
+    width: fit-content;
+
+    mat-card-subtitle {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    &.user-message {
+        margin-left: auto;
+        background-color: #69f0ae;
+        color: black;
+
+        mat-card-subtitle {
+            color: #444;
+            
+        }
+    }
+}

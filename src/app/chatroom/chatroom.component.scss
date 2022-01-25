@@ -1,0 +1,35 @@
+.messages {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 15px 20px;
+    overflow: auto;
+}
+
+.new-message {
+    display: flex;
+    justify-content: stretch;
+    margin: 20px;
+    flex: 1 1;
+
+    .message-input {
+        flex: 1 1 200px;
+        color: white;
+    }
+}
+
+.chat-room {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 64px);
+
+    .message-bar {
+        display: flex;
+        flex-direction: row;
+        
+        .delete-button {
+            margin: 25px 0 10px 15px;
+            flex: 0 0 40px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<div class="chat-room">
+    <section class="messages">
+        <ng-template messageHost></ng-template>
+    </section>
+    <div class="message-bar">
+        <button class="delete-button" mat-mini-fab color="primary" aria-label="Example icon button with a delete icon"
+            (click)="deleteAllMessages()">
+            <mat-icon>delete</mat-icon>
+        </button>
+        <form class="new-message" #messageForm="ngForm" (ngSubmit)="sendMessage()">
+
+            <mat-form-field appearance="fill" class="message-input">
+                <mat-label>Message</mat-label>
+                <input matInput type="text" [(ngModel)]="newMessage" name="message">
+                <button [disabled]="!newMessage || isLoading" matSuffix mat-icon-button aria-label="Send" type="submit">
+                    <mat-icon>send</mat-icon>
+                </button>
+            </mat-form-field>
+        </form>
+    </div>
+
+</div>

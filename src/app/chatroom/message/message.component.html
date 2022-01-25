@@ -1,0 +1,11 @@
+<mat-card class="message-card" [ngClass]="{'user-message': isFromCurrentUser }">
+    <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-subtitle *ngIf="!isFromCurrentUser">From: {{ message.userName }}</mat-card-subtitle>
+        <mat-card-subtitle>At: {{ message.date | date: 'short'}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        {{ message.content }}
+    </mat-card-content>
+</mat-card>
+  

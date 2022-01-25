@@ -1,0 +1,10 @@
+<mat-toolbar color="blue" class="toolbar">
+    <span>Chatroom</span>
+    <button mat-icon-button class="account-button" aria-label="Account" [matMenuTriggerFor]="menu"
+        *ngIf="currentUser | async">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">Log Out</button>
+    </mat-menu>
+</mat-toolbar>
